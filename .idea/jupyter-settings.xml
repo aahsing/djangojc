@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JupyterPersistentConnectionParameters">
+    <option name="knownRemoteServers">
+      <list>
+        <JupyterConnectionParameters>
+          <option name="authType" value="notebook" />
+          <option name="token" value="1d7d33be8eb3e1127a2c7651de31c3573d014a29a641fa7e" />
+          <option name="urlString" value="http://192.168.190.146:8888/" />
+          <authParams2>
+            <map>
+              <entry key="token" value="1d7d33be8eb3e1127a2c7651de31c3573d014a29a641fa7e" />
+            </map>
+          </authParams2>
+        </JupyterConnectionParameters>
+      </list>
+    </option>
+    <option name="moduleParameters">
+      <map>
+        <entry key="$USER_HOME$/PycharmProjects/TF_Learn/.idea/TF_Learn.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="authType" value="notebook" />
+              <option name="token" value="1d7d33be8eb3e1127a2c7651de31c3573d014a29a641fa7e" />
+              <option name="urlString" value="http://192.168.190.146:8888/" />
+              <authParams2>
+                <map>
+                  <entry key="token" value="1d7d33be8eb3e1127a2c7651de31c3573d014a29a641fa7e" />
+                </map>
+              </authParams2>
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/PycharmProjects/forcast/.idea/forcast.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+              <option name="port" value="9999" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

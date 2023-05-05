@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'users',
+    's3apps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +63,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'projects/templates'),
             os.path.join(BASE_DIR, 'users/templates'),
+            os.path.join(BASE_DIR, 's3apps/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

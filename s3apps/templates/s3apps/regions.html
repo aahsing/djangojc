@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>List all S3 clusters</h2>
+  <table>
+    <th>
+      Site
+    </th>
+    <th>
+      Cluster
+    </th>
+    {% for all_cluster in all_clusters %}
+    <tr>
+      <td>
+        {{ all_cluster.site }}
+      </td>
+      <td>
+        {{ all_cluster.cluster }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <h2>Select the Site and Cluster</h2>
+  <form>
+    <label for="site-dropdown">Site:</label>
+    <select id="site-dropdown" name="Sites">
+      <option value="">Select a site</option>
+
+      {% for site in sites %}
+      <option value="{{ site }}">{{ site }}</option>
+      {% endfor %}
+    </select>
+    <label for="cluster-dropdown">Cluster:</label>
+    <select id="cluster-dropdown" name="Clusters">
+      <option value="">Select a cluster</option>
+    </select>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#site-dropdown').change(function() {
+            const site = $(this).val();
+            $.ajax({
+                  url: "{% url 'get_clusters' %}",
+                  data: {'site': site},
+                  dataType: 'json',
+                  success: function(data) {
+                    const clusterDropdown = $('#cluster-dropdown');
+                    clusterDropdown.empty();
+                      clusterDropdown.append('<option value="">Select a cluster</option>');
+                      $.each(data.clusters, function(index, cluster) {
+                          clusterDropdown.append('<option value="' + cluster + '">' + cluster + '</option>');
+                      });
+                  }
+              });
+          });
+      });
+    </script>
+  </form>
+</div>
+
+
+{% endblock %}

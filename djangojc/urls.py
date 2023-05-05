@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('projects/', include('projects.urls')),
     path('users/', include('users.urls')),
+    path('s3/', include('s3apps.urls')),
 ]
